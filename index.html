@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Inflación Argentina - Herramienta Financiera</title>
+    <meta name="description" content="Calcula la inflación acumulada en Argentina utilizando el IPC oficial del INDEC. Herramienta online gratuita para estimar el cambio en el poder adquisitivo de tu dinero.">
+    <meta name="keywords" content="calculadora de inflación, inflación argentina, ipc indec, poder adquisitivo, ajuste por inflación, calculadora, argentina, precios al consumidor, inflación acumulada">
+    <meta name="author" content="Juan Pérez">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>💰 Calculadora de Inflación Argentina</h1>
+                <p>Convierte valores históricos a precios actuales</p>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Calculator Section -->
+        <section class="calculator-section">
+            <div class="container">
+                <h2>🧮 Calculadora de Inflación</h2>
+                <div class="calculator-card">
+                    <div class="input-group">
+                        <label for="amount">Monto ($):</label>
+                        <input type="number" id="amount" placeholder="Ingrese el monto" value="100">
+                    </div>
+                    
+                    <div class="date-group">
+                        <div>
+                            <label for="fromMonth">Desde:</label>
+                            <select id="fromMonth">
+                                <option value="1">Enero</option>
+                                <option value="2">Febrero</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Mayo</option>
+                                <option value="6">Junio</option>
+                                <option value="7">Julio</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+                            <select id="fromYear">
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024" selected>2024</option>
+                                <option value="2025">2025</option>
+                            </select>
+                        </div>
+                        
+                        <div class="arrow">↔️</div>
+                        
+                        <div>
+                            <label for="toMonth">Hasta:</label>
+                            <select id="toMonth">
+                                <option value="1">Enero</option>
+                                <option value="2">Febrero</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Mayo</option>
+                                <option value="6">Junio</option>
+                                <option value="7" selected>Julio</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+                            <select id="toYear">
+                                <option value="2024">2024</option>
+                                <option value="2025" selected>2025</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button id="calculateBtn" class="calculate-btn">Calcular Inflación</button>
+                    
+                    <div id="result" class="result-card">
+                        <h3>Resultado:</h3>
+                        <p><strong>$100</strong> en enero 2024 equivale a <strong class="result-amount">$115.10</strong> en julio 2025</p>
+                        <p>Incremento: <span class="increment">15.1%</span></p>
+                        <p>Promedio mensual: <span class="monthly">2.37%</span></p>
+                    </div>
+                </div>
+                
+                <div class="cta-section">
+                    <p>Para cálculos más precisos y datos históricos completos, visita la</p>
+                    <a href="https://calculadoradeinflacion.com/" target="_blank" rel="dofollow" class="main-cta">
+                        📊 Calculadora de Inflación Argentina Oficial
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Table Section -->
+        <section class="table-section">
+            <div class="container">
+                <h2>📈 Tabla de Inflación Histórica Argentina</h2>
+                <div class="table-wrapper">
+                    <table class="inflation-table">
+                        <thead>
+                            <tr>
+                                <th>Año</th>
+                                <th>Inflación Anual (%)</th>
+                                <th>IPC Base</th>
+                                <th>Dólar Oficial</th>
+                                <th>Dólar Libre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2025</td>
+                                <td>32.47%</td>
+                                <td>3,246</td>
+                                <td>$1,220</td>
+                                <td>$1,350</td>
+                            </tr>
+                            <tr>
+                                <td>2024</td>
+                                <td>211.4%</td>
+                                <td>2,450</td>
+                                <td>$950</td>
+                                <td>$1,200</td>
+                            </tr>
+                            <tr>
+                                <td>2023</td>
+                                <td>138.3%</td>
+                                <td>786</td>
+                                <td>$366</td>
+                                <td>$1,000</td>
+                            </tr>
+                            <tr>
+                                <td>2022</td>
+                                <td>94.8%</td>
+                                <td>330</td>
+                                <td>$177</td>
+                                <td>$350</td>
+                            </tr>
+                            <tr>
+                                <td>2021</td>
+                                <td>50.9%</td>
+                                <td>169</td>
+                                <td>$103</td>
+                                <td>$200</td>
+                            </tr>
+                            <tr>
+                                <td>2020</td>
+                                <td>42.0%</td>
+                                <td>112</td>
+                                <td>$84</td>
+                                <td>$170</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Section -->
+        <article class="article-section">
+            <div class="container">
+                <header class="article-header">
+                    <h1>📊 Calculadora de Inflación Argentina: Guía Completa 2025</h1>
+                    <div class="article-meta">
+                        <time datetime="2025-01-15">15 de enero, 2025</time>
+                        <span class="reading-time">⏱️ 8 min de lectura</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p class="lead">La calculadora de inflación argentina permite convertir valores históricos a precios actuales de forma sencilla, utilizando datos oficiales del INDEC y proyecciones del Banco Central de la República Argentina (BCRA). Es una herramienta útil para comprender cómo ha variado el valor del peso argentino desde su introducción en enero de 1992 hasta el presente.</p>
+
+                    <div class="image-container">
+                        <img src="grahp2.png" alt="Gráfico histórico de inflación argentina mostrando evolución del dólar oficial vs libre" class="article-image">
+                        <figcaption>Evolución histórica del dólar oficial y libre en Argentina (Fuente: calculadoradeinflacion.com)</figcaption>
+                    </div>
+
+                    <h2>🔢 ¿Cómo funciona la calculadora?</h2>
+                    <p>Los precios históricos en Argentina pueden ser actualizados a valores de hoy empleando índices de inflación históricos. Esto incluye tanto el Índice de Precios al Consumidor (IPC) como variaciones del dólar (oficial o libre). Además, podés consultar la inflación proyectada para los próximos seis meses según el Relevamiento de Expectativas de Mercado (REM) del BCRA.</p>
+
+                    <div class="highlight-box">
+                        <h3>🔢 Ejemplo de conversión:</h3>
+                        <p><strong>$100 en enero de 2025 equivalen a $115,10 en julio de 2025</strong>, lo que representa un incremento del <span class="highlight">15,1%</span>, o un promedio mensual de <span class="highlight">2,37%</span> (32,47% anualizado).</p>
+                        <a href="https://calculadoradeinflacion.com/" target="_blank" rel="dofollow" class="inline-cta">➡️ Ver cálculo online en la calculadora de inflación argentina</a>
+                    </div>
+
+                    <h2>📁 Fuentes de datos oficiales</h2>
+                    <p>Los datos de inflación posteriores a 2017 provienen del <strong>INDEC</strong> (Instituto Nacional de Estadística y Censos de Argentina). Los datos anteriores fueron extraídos del trabajo académico "Online and official price indexes: Measuring Argentina's inflation" (MIT, Sloan Research Paper No. 4975-12, febrero 2012).</p>
+
+                    <ul>
+                        <li>✅ Series históricas desde enero de 1943</li>
+                        <li>✅ Datos oficiales del INDEC post-2017</li>
+                        <li>✅ Proyecciones del BCRA (REM)</li>
+                        <li>✅ Descarga en formato CSV disponible</li>
+                    </ul>
+
+                    <h2>📲 Acceso móvil y funcionalidades</h2>
+                    <p>Podés instalar la <a href="https://calculadoradeinflacion.com/" target="_blank" rel="dofollow"><strong>calculadora de inflación argentina</strong></a> como una app en tu celular Android o iOS, para tener acceso directo a los cálculos. También podés cambiar la fuente de ajuste de precios entre IPC, dólar oficial o dólar libre.</p>
+
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h4>🧮 Múltiples índices</h4>
+                            <p>IPC, dólar oficial y dólar libre para ajustes precisos</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>📱 App móvil</h4>
+                            <p>Instalación como PWA en Android e iOS</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>📊 Datos históricos</h4>
+                            <p>Series completas desde 1943 hasta la actualidad</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>🔮 Proyecciones</h4>
+                            <p>Estimaciones futuras basadas en datos del BCRA</p>
+                        </div>
+                    </div>
+
+                    <h2>❓ Preguntas frecuentes sobre inflación</h2>
+                    
+                    <div class="faq-item">
+                        <h3>¿Cómo interpretar las fechas?</h3>
+                        <p>Las fechas se interpretan como el primer día del mes. Por ejemplo, "enero de 1992" debe interpretarse como "1 de enero de 1992".</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>¿Por qué difiere del precio real del dólar?</h3>
+                        <p>La herramienta muestra precios ajustados exclusivamente según el índice de precios al consumidor. El precio del dólar puede evolucionar de manera distinta al IPC: puede aumentar más rápido, igual o más lento.</p>
+                    </div>
+
+                    <div class="cta-final">
+                        <h3>🚀 Calcula tu inflación ahora</h3>
+                        <p>Utiliza la herramienta oficial más completa de Argentina para tus cálculos de inflación:</p>
+                        <a href="https://calculadoradeinflacion.com/" target="_blank" rel="dofollow" class="final-cta">
+                            Ir a Calculadora de Inflación Argentina →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Author Profile Section -->
+        <section class="author-section">
+            <div class="container">
+                <div class="author-card">
+                    <div class="author-avatar">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%234A90E2'/%3E%3Ctext x='40' y='50' text-anchor='middle' fill='white' font-size='30' font-family='Arial'%3ECA%3C/text%3E%3C/svg%3E" alt="Carlos Análisis - Economista">
+                    </div>
+                    <div class="author-info">
+                        <h3>Auther </h3>
+                        <p class="author-title">Economista y Analista Financiero</p>
+                        <p class="author-bio">Especialista en análisis macroeconómico argentino con más de 10 años de experiencia en el estudio de la inflación y política monetaria. Magister en Economía por la UBA y colaborador regular en medios especializados.</p>
+                        <div class="author-credentials">
+                            <span class="credential">📚 Magister en Economía - UBA</span>
+                            <span class="credential">📊 Analista en Banco Central</span>
+                            <span class="credential">✍️ Autor de 50+ artículos económicos</span>
+                        </div>
+                        <div class="author-social">
+                            <a href="#" class="social-link">LinkedIn</a>
+                            <a href="#" class="social-link">Twitter</a>
+                            <a href="mailto:carlos@ejemplo.com" class="social-link">Email</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Calculadora de Inflación Argentina. Datos basados en fuentes oficiales del INDEC y BCRA.</p>
+            <p>Para cálculos oficiales, visita: <a href="https://calculadoradeinflacion.com/" target="_blank" rel="dofollow">calculadoradeinflacion.com</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
